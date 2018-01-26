@@ -7,9 +7,8 @@ app.use(bodyParser.json());
 app.post('/test', function(req, res) {
   let x = parseInt(req.body.x) || null
   let y = parseInt(req.body.y) || null
-  // res.setHeader('Content-Type', 'application/json');
 
-  res.send(JSON.stringify({"sum": x+y}))
+  res.send({"sum": x+y})
 })
 
 app.listen(3000, function() {
